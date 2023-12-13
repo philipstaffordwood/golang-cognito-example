@@ -1,10 +1,13 @@
 # Golang AWS Cognito Register, Verify phone number, Login and Get User example
 
+This is a fork of https://github.com/br4in3x/golang-cognito-example.
+It's been modified to use email verification instead of SMS verification.
+
 ## Just Show Me
 
 If you are just curious how things work all together, you can find this example working at https://golang-cognito-example.herokuapp.com
 
-## Instructions
+## Overview
 
 This example code demonstrates how to use AWS Cognito with AWS Go SDK in a form of simple web pages where you can:
 
@@ -13,7 +16,18 @@ This example code demonstrates how to use AWS Cognito with AWS Go SDK in a form 
 3. Verify user's phone
 4. Login with username or refresh token
 
-In order this solution to work, you need to have AWS credentials configured (file `.aws/configuration` exists) and User Pool created in AWS Console. You have to disable "Remember device" and enable "Sms second-factor" on authentication tab.
+## Requirements
+
+In order this solution to work, you need to have AWS credentials configured (file `.aws/configuration` exists) 
+and User Pool created in AWS Console. You have to disable "Remember device" and enable "Sms second-factor" on 
+authentication tab.
+
+## Create User Pool using CLI
+
+```sh
+aws cognito-idp create-user-pool --pool-name MyUserPool --username-attributes "email" --email-configuration=SourceArn="arn:aws:ses:us-east-1:111111111111:identity/jane@example.com",ReplyToEmailAddress="jane@example.com"
+```
+
 
 When the app client is created, in it's settings select "Enable username-password (non-SRP) flow for app-based authentication (USER_PASSWORD_AUTH)".
 

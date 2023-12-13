@@ -52,7 +52,7 @@ func Call(a *app.App, w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	conf := &aws.Config{Region: aws.String("us-east-1")}
+	conf := &aws.Config{Region: aws.String("eu-west-1")}
 	sess, err := session.NewSession(conf)
 	if err != nil {
 		panic(err)

@@ -24,10 +24,10 @@
     <div class="ui raised text container">
       <div class="column">
         <h1 class="ui header">Register</h1>
-        <p>In case of successful registeration you will be redirected to /otp (phone number verification).</p>
+        <p>In case of successful registration you will be redirected to /otp (email verification).</p>
         <div class="ui compact message" id="message">
           <p>
-            An message ocurred during your request.
+            An message occurred during your request.
           </p>
         </div>
         <form class="ui form padded segment" method="post" action="/register">
@@ -49,15 +49,15 @@
               placeholder="Password"
             />
           </div>
-          <div class="field">
-            <label>Phone number</label>
-            <input
-              type="text"
-              name="phone_number"
-              required
-              placeholder="+XXXXXXXXXXX"
-            />
-          </div>
+<!--          <div class="field">-->
+<!--            <label>Phone number</label>-->
+<!--            <input-->
+<!--              type="text"-->
+<!--              name="phone_number"-->
+<!--              required-->
+<!--              placeholder="+XXXXXXXXXXX"-->
+<!--            />-->
+<!--          </div>-->
           <button class="ui button" type="submit">Submit</button>
         </form>
         <p>

@@ -28,5 +28,5 @@ func (a *App) OTP(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	http.Redirect(w, r, "/username", http.StatusFound)
+	http.Redirect(w, r, "/login", http.StatusFound)
 }

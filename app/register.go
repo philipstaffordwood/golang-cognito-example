@@ -14,17 +14,17 @@ func (a *App) Register(w http.ResponseWriter, r *http.Request) {
 
 	username := r.Form.Get("username")
 	password := r.Form.Get("password")
-	phoneNumber := r.Form.Get("phone_number")
+	//phoneNumber := r.Form.Get("phone_number")
 
 	user := &cognito.SignUpInput{
-		Username: aws.String(username),
-		Password: aws.String(password),
-		ClientId: aws.String(a.AppClientID),
+		Username:       aws.String(username),
+		Password:       aws.String(password),
+		ClientId:       aws.String(a.AppClientID),
 		UserAttributes: []*cognito.AttributeType{
-			{
-				Name:  aws.String("phone_number"),
-				Value: aws.String(phoneNumber),
-			},
+			//{
+			//	Name:  aws.String("phone_number"),
+			//	Value: aws.String(phoneNumber),
+			//},
 		},
 	}
 
