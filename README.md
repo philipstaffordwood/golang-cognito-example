@@ -3,6 +3,8 @@
 This is a fork of https://github.com/br4in3x/golang-cognito-example.
 It's been modified to use email verification instead of SMS verification.
 
+NOTE: AWS Region is hardcoded in main.go
+
 ## Just Show Me
 
 If you are just curious how things work all together, you can find this example working at https://golang-cognito-example.herokuapp.com
